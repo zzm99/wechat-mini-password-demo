@@ -1,1 +1,1 @@
-# wechat-mini-myCodebook
+# wechat-mini-password-demo
