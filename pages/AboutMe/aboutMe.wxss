@@ -1,0 +1,21 @@
+/* pages/aboutMe/aboutMe.wxss */
+page{
+  background-color: #667199
+}
+
+.btnback {
+  width: 50%;
+  top: 350px;
+  margin-bottom: 30px;
+  background-color: red;
+  align-items: center
+}
+
+.view_class {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item_class {
+  margin-top: 10px;
+}

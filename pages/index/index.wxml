@@ -1,0 +1,29 @@
+<!--index.wxml-->
+
+<!--图片滚动显示-->
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+>
+  <block wx:for="{{images}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode='scaleToFill' style="width: 100%; height: 200px;"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="container">
+  <text> 欢迎使用Facelock密码管理器 </text>
+  <text> v0.0.0</text>
+</view>
+
+<!--登陆按钮-->
+<button class='loginbtn' bindtap='btnlogin'> 登陆 </button>
+<button class='registbtn' bindtap='btnregist'> 注册 </button>
+
+<!--所有者声明-->
+<view class="container">
+  <text class="rightText"> Copyright©yocichen </text>
+</view>

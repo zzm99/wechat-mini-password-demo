@@ -1,0 +1,23 @@
+<!-- camera.wxml相机大小需要从重新设置 -->
+<camera
+  device-position="front"
+  flash="off"
+  binderror="error"
+  style="width: 100%; height: 400px;"
+></camera>
+
+<!-- 需要使用 button 来授权登录 -->
+<button
+  wx:if="{{canIUse}}"
+  open-type="getUserInfo"
+  bindgetuserinfo="bindGetUserInfo"
+  type="primary"
+>
+  授权
+</button>
+<view wx:else>请升级微信版本</view>
+
+<!-- 拍照按钮 -->
+<button type="primary" bindtap="takePhoto"> 拍照 </button>
+
+<button bindtap='btnreg'> 注册须知 </button>

@@ -1,0 +1,61 @@
+/* pages/UI/ui.wxss */
+page{
+  background-color: #667199
+}
+
+/*添加图片图标样式---图片固定*/
+.addpic {
+  position:fixed;
+  left:280px;
+  bottom:30px;
+}
+
+.myrecord {
+  margin-top: 5px;
+  height: 30px;
+  /*控件居中样式*/
+  text-align: center;
+}
+
+.myrecordtext {
+  font-weight:bold;
+  text-decoration:underline;
+  font-family:"宋体";
+}
+
+/*账号信息条目背景样式*/
+.infoBack {
+    margin-top: 10px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    background: #673bb7;
+    color:white;
+    padding: 0rpx 100rpx;
+    /*控件居中样式*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.later_img {
+  position: absolute;
+  margin-left: 365px;
+  margin-top: -40px;
+}
+
+.block_class {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal_del_textKey {
+  color: red
+}
+
+.modal_del_textLabel {
+  color: orange
+}
+
+
+/*弹窗内input样式*/

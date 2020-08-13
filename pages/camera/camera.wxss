@@ -1,0 +1,4 @@
+/* pages/camera/camera.wxss */
+page{
+  background-color: #667199
+}

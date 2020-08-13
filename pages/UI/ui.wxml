@@ -1,0 +1,52 @@
+<!--我的账号-->
+<view class='myrecord'>
+  <text class='myrecordtext'> 我的账号 </text>
+</view>
+
+<!--显示账号密码记录-->
+<view class='section'>
+  <scroll-view scroll-y="true" style="height: 550px;">
+    <block class='block_class' wx:for="{{info}}" wx:for-index="item_id" wx:for-item="item_key">
+    <!--bindtouch函数绑定触摸弹出账号密码-->
+      <view class='infoBack' bindtouchstart='touchShow' id="{{item_id}}"> <!--先获取id-->
+      {{item_key}}
+      </view>
+      <view>
+        <image class='later_img' style="width: 30px; height: 36px;" mode="aspectFit" src="/images/shanchu.png" bindtap='deleteRecord' id="{{item_id}}"></image>
+      </view> 
+    </block>  
+  </scroll-view>
+</view>
+
+<!--添加记录图片按钮-->
+<view>
+  <image class="addpic" 
+  style="width: 60px; height: 60px;"
+  mode="aspectFit" 
+  src='/images/add.png' 
+  bindtap='addpic'></image>
+</view>
+
+<!--添加记录弹窗-->
+<modal id="modal" hidden="{{hiddenModal_input}}" title="添加账号" bindcancel="modal_cancel" bindconfirm="modal_confirm">        
+  <input type='text' placeholder="账号：未设置" bindinput='addkey' value="{{inputText}}" class='input_modal'/>      
+  <input type='text' password='true' placeholder="密码：未设置" bindinput='addvalue_pwd' value="{{inputText}}" class='input_modal'/>  
+  <input type='text' placeholder="标签/备注：未设置" bindinput='addvalue_label' value="{{inputText}}" class='input_modal'/>        
+</modal>
+
+<!--某一账号信息弹窗-->
+<modal id="modal" hidden="{{hiddenModal_showInfo}}" title="当前账号" bindcancel="modal_showInfo_cancel" bindconfirm="modal_showInfo_confirm">
+  <text> 标签： {{cur_label}}\n</text>
+  <text> 账号： {{cur_key}}\n </text>
+  <text> 密码： {{cur_pwd}} </text>
+</modal>
+
+<!--删除确认弹窗-->
+<modal id="modal" hidden="{{hiddenModal_delInfo}}" title="确认删除" bindcancel="modal_delInfo_cancel" bindconfirm="modal_delInfo_confirm">
+  <text> 确定要删除账号: </text> 
+  <text class='modal_del_textKey'> {{cur_key}} </text> 
+  <text class='modal_del_textLabel'> - {{cur_label}} </text> 
+  <text> 的相关记录吗？(包括账号、密码和标签) </text>
+</modal>
+
+

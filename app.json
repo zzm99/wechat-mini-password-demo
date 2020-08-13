@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/UI/ui",
+    "pages/camera/camera",
+    "pages/AboutMe/aboutMe",
+    "pages/logs/logs",
+    "pages/LoginCamera/logincamera"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "backgroundColor": "#4D61B3",
+    "list": [
+      {
+        "pagePath": "pages/UI/ui",
+        "text": "账号密码",
+        "iconPath": "/images/zhanghaomima.png",
+        "selectedIconPath": "/images/kaisuo.png"
+      },
+      {
+        "selectedIconPath": "/images/guanyuchange.png",
+        "iconPath": "/images/guanyu.png",
+        "pagePath": "pages/AboutMe/aboutMe",
+        "text": "关于"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

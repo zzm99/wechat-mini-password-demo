@@ -1,0 +1,17 @@
+<view class="view_class">
+  <button bindtap='btn_intro' class='item_class'> 小程序简介 </button>
+  <button bindtap='btn_vrs' class='item_class'> 版本管理 </button>
+  <!--需要一个单独的页面简单介绍使用-->
+  <button class='item_class'> 使用手册 </button>
+  <button class='item_class'> 我 </button>
+  
+</view>
+
+<view>
+  <button class='btnback' bindtap='btn_back' > 退出登陆 </button>
+</view>
+
+<!--某一账号信息弹窗-->
+<modal id="modal" hidden="{{hiddenModal_show}}" title="{{currentTitle}}" bindconfirm="modal_show_confirm" bindcancel="modal_show_cancel">
+  <text> {{currentText}} </text>
+</modal>
